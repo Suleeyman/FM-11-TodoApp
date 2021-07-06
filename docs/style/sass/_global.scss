@@ -1,0 +1,23 @@
+@use "./variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*, ::after, ::before {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}

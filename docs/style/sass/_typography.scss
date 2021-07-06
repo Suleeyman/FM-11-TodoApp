@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    color: var(--secondary-color-item);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}

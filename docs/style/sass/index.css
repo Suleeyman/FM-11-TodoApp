@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --neutre-color: #3a7cfd;
+  --primary-bg-color: #f5f5f5;
+  --primary-color: #494C6B;
+  --bg-el: #ffffff;
+  --cross: #494C6B;
+  --secondary-color-item: #6B6C7B;
+  --shadow: #c2c3d680;
+}
+
+[data-theme=dark] {
+  --neutre-color: #3a7cfd;
+  --primary-bg-color: #171823;
+  --primary-color: #C8CBE7;
+  --bg-el: #25273D;
+  --cross: #A3A7D8;
+  --secondary-color-item: #A5A6B0;
+  --shadow: #00000080;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: var(--secondary-color-item);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

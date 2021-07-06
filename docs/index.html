@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="A Todoapp which will helps your daily todo's remembered.">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-moon.svg">
+  <link rel="stylesheet" href="./style/style.css">
+  <script defer src="./js/app.js"></script>
+  <title>Todo app | Frontend Mentor</title>
+</head>
+<body>
+  <aside>
+    <picture>
+      <source media="(min-width: 800px)" srcset="./images/bg-desktop-light.jpg">
+      <img src="./images/bg-mobile-light.jpg" alt="Sky light background">
+    </picture>
+    <picture class="hidden">
+      <source media="(min-width: 800px)" srcset="./images/bg-desktop-dark.jpg">
+      <img src="./images/bg-mobile-dark.jpg" alt="Walker dark background">
+    </picture>
+  </aside>
+  <main>
+    <header>
+      <h1>TODO</h1>
+      <button class="toggle-theme" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+      </button>
+    </header>
+    <form action="#" autocomplete="off">
+      <button type="submit"></button>
+      <input type="text" id="todo" name="todo" maxlength="29" placeholder="Create a new todo...">
+    </form>
+  </main>
+  <div class="todo--container">
+    <ul class="todo-list">
+    </ul>
+    <div class="todo--description">
+      <p>
+        <span id="count-todo">0</span>
+        items left
+      </p>
+      <a role="button" tabindex="0">
+        Clear Completed
+      </a>
+      <nav>
+        <a class="is-active" role="button" tabindex="0">All</a>
+        <a role="button" tabindex="0" data-state="active">Active</a>
+        <a role="button" tabindex="0" data-state="completed">Completed</a>
+      </nav>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --neutre-color: #3a7cfd;
+  --primary-bg-color: #f5f5f5;
+  --primary-color: #494C6B;
+  --bg-el: #ffffff;
+  --cross: #494C6B;
+  --secondary-color-item: #6B6C7B;
+  --shadow: #c2c3d680;
+}
+
+[data-theme=dark] {
+  --neutre-color: #3a7cfd;
+  --primary-bg-color: #171823;
+  --primary-color: #C8CBE7;
+  --bg-el: #25273D;
+  --cross: #A3A7D8;
+  --secondary-color-item: #A5A6B0;
+  --shadow: #00000080;
+}
+
+main, .todo--container {
+  padding-left: calc(50% - calc(100% - 48px) / 2);
+  padding-right: calc(50% - calc(100% - 48px) / 2);
+}
+
+@media screen and (min-width: 1440px) {
+  main, .todo--container {
+    padding-left: calc(50% - 1400px / 2);
+    padding-right: calc(50% - 1400px / 2);
+  }
+}
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: var(--secondary-color-item);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+aside img {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  min-height: 200px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+main header {
+  display: flex;
+  align-items: baseline;
+}
+main header button {
+  margin-left: auto;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+main header button:hover > * {
+  filter: drop-shadow(2px 2px 2px var(--cross));
+}
+
+form {
+  position: relative;
+  bottom: -20px;
+  height: 50px;
+  background-color: var(--bg-el);
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px var(--shadow);
+}
+form button {
+  border: 0;
+  top: 50%;
+  left: 0;
+  transform: translate(100%, -50%);
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid var(--cross);
+  position: absolute;
+  background-color: transparent;
+}
+form input {
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  font-size: inherit;
+  padding-left: 50px;
+  padding-right: 20px;
+  background-color: transparent;
+  border: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+form input::placeholder {
+  color: inherit;
+  font-family: inherit;
+  opacity: 0.8;
+}
+form input:focus {
+  outline: none;
+}
+form label {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.todo--container ul {
+  list-style: none;
+  background-color: var(--bg-el);
+  box-shadow: 0px 35px 50px -15px var(--shadow);
+  border-radius: 5px 5px 0 0;
+  margin-top: -26px;
+}
+.todo--container ul li {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--shadow);
+  cursor: pointer;
+}
+.todo--container ul li.is-done:not(li button) {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+.todo--container ul li:hover .delete-button svg {
+  opacity: 1;
+}
+.todo--container ul li:hover .complete-button:not(.is-completed) {
+  border: 1px solid transparent;
+  box-shadow: 0px 100px 1px var(--bg-el) inset;
+  background: linear-gradient(200deg, #57ddff 0%, #c058f3 100%);
+}
+.todo--container ul li .complete-button {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid var(--cross);
+  border-radius: 50px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.todo--container ul li .complete-button.is-completed {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(200deg, #57ddff 0%, #c058f3 100%);
+  border: 0;
+}
+.todo--container ul li .delete-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin-left: auto;
+}
+.todo--container ul li .delete-button svg {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+.todo--container .todo--description {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  background-color: var(--bg-el);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0px 35px 50px -15px var(--shadow);
+}
+.todo--container .todo--description a {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+.todo--container .todo--description a:hover, .todo--container .todo--description a:focus {
+  opacity: 1;
+  transform: translate(3%, -5%);
+  text-decoration: underline;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 80px;
+  transform: translate(0, 150%);
+  background-color: var(--bg-el);
+  box-shadow: 0px 35px 50px -15px var(--shadow);
+  border-radius: 5px;
+}
+nav a.is-active {
+  color: var(--neutre-color);
+}
+
+footer {
+  margin-top: 100px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  aside {
+    min-height: 300px;
+  }
+
+  main {
+    padding-top: 78px;
+    padding-bottom: 78px;
+    min-height: 300px;
+  }
+
+  .todo--container ul {
+    margin-top: -55px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
