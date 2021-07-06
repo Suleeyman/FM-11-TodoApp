@@ -206,7 +206,8 @@ form label {
   opacity: 0.3;
   transition: all 0.3s ease;
 }
-.todo--container .todo--description {
+
+.todo--description {
   display: flex;
   position: relative;
   padding: 20px;
@@ -214,21 +215,24 @@ form label {
   border-radius: 0 0 5px 5px;
   box-shadow: 0px 35px 50px -15px var(--shadow);
 }
-.todo--container .todo--description a {
-  margin-left: auto;
+.todo--description a {
   cursor: pointer;
   opacity: 0.75;
   transition: 0.3s ease;
 }
-.todo--container .todo--description a:hover, .todo--container .todo--description a:focus {
+.todo--description a:hover, .todo--description a:focus {
   opacity: 1;
   transform: translate(3%, -5%);
   text-decoration: underline;
+}
+.todo--description > a {
+  margin-left: auto;
 }
 
 nav {
   position: absolute;
   display: flex;
+  justify-content: space-around;
   gap: 1rem;
   bottom: 0;
   left: 0;
@@ -262,6 +266,24 @@ footer {
 
   .todo--container ul {
     margin-top: -55px;
+  }
+
+  .todo--description {
+    justify-content: space-evenly;
+  }
+  .todo--description > a {
+    margin-left: 0;
+  }
+
+  nav {
+    position: static;
+    gap: 3rem;
+    transform: translate(0, 0);
+    bottom: auto;
+    left: auto;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
   }
 }
 
