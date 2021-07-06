@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Submited on FM](https://your-solution-url.com)
-- Live Site URL: [Github page](https://your-live-site-url.com)
+- Solution URL: [Submited on FM](https://www.frontendmentor.io/solutions/responsive-todoapp-with-scss-without-drag-and-drop-WnytkTruP)
+- Live Site URL: [Github page](https://suleeyman.github.io/FM-11-TodoApp/)
 
 ## My process
 

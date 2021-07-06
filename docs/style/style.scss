@@ -226,6 +226,7 @@ footer {
 
     .todo--description {
         justify-content: space-evenly;
+        align-items: center;
 
         & > a {
             margin-left: 0;
@@ -234,6 +235,7 @@ footer {
 
     nav {
         position: static;
+        align-items: center;
         gap: 3rem;
         transform: translate(0, 0);
         bottom: auto; left: auto;

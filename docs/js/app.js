@@ -143,6 +143,7 @@ class App {
         imgParent.children[this._themeObj[this._theme].index ^ 1].classList.add('hidden')
         document.documentElement.setAttribute('data-theme', this._themeObj[this._theme].name)
         btnToggleTheme.innerHTML = this._themeObj[this._theme].svg
+        if (!JSON.parse(localStorage.getItem('allTodos'))) return;
         this._allTodos = JSON.parse(localStorage.getItem('allTodos'))
         this._allTodos.forEach(todo => {
             let html = `
