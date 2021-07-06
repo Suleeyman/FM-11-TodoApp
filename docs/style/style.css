@@ -270,7 +270,7 @@ footer {
 
   .todo--description {
     justify-content: space-evenly;
-    align-items: center;
+    align-items: baseline;
   }
   .todo--description > a {
     margin-left: 0;
