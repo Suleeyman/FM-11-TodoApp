@@ -201,12 +201,6 @@ nav {
 
 }
 
-footer {
-    margin-top: 100px;
-    opacity: .8;
-    text-align: center;
-}
-
 @media screen and (min-width: 800px) {
     aside {
         min-height: 300px;
@@ -236,7 +230,6 @@ footer {
     nav {
         position: static;
         align-items: center;
-        gap: 3rem;
         transform: translate(0, 0);
         bottom: auto; left: auto;
         width: auto;

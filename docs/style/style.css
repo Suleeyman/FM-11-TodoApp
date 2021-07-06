@@ -24,10 +24,10 @@ main, .todo--container {
   padding-right: calc(50% - calc(100% - 48px) / 2);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 800px) {
   main, .todo--container {
-    padding-left: calc(50% - 1400px / 2);
-    padding-right: calc(50% - 1400px / 2);
+    padding-left: calc(50% - 540px / 2);
+    padding-right: calc(50% - 540px / 2);
   }
 }
 *, ::after, ::before {
@@ -247,12 +247,6 @@ nav a.is-active {
   color: var(--neutre-color);
 }
 
-footer {
-  margin-top: 100px;
-  opacity: 0.8;
-  text-align: center;
-}
-
 @media screen and (min-width: 800px) {
   aside {
     min-height: 300px;
@@ -279,7 +273,6 @@ footer {
   nav {
     position: static;
     align-items: center;
-    gap: 3rem;
     transform: translate(0, 0);
     bottom: auto;
     left: auto;
